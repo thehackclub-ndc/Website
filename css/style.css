@@ -87,7 +87,7 @@ body {
 }
 
 section {
-  background: #000;
+  background: rgb(3, 0, 27);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -123,7 +123,8 @@ button:focus {
   color: #00c8e6;
 }
 .event_blog_area.section_gap {
-  background: #000;
+  background: rgb(3, 0, 27);
+
 }
 .vision_area.section_gap {
   background-color:rgb(206, 41, 60);
@@ -217,7 +218,7 @@ background-image: linear-gradient(to right, rgb(228, 115, 45), rgb(206, 41, 143)
 }
 
 .header_area .navbar {
-  background: #000;
+  background: rgb(3, 0, 27);
   padding: 0px;
   border: 0px;
   border-radius: 0px;
@@ -1866,13 +1867,13 @@ h3 {
 .contact_info .info_item h6 {
   font-size: 16px;
   line-height: 24px;
-  color: #222222;
+  color: white;
   font-weight: 300;
   margin-bottom: 0px;
 }
 
 .contact_info .info_item h6 a {
-  color: #222222;
+  color: white;
 }
 
 .contact_info .info_item p {
@@ -3726,7 +3727,8 @@ margin: 0 auto;
 
 
 .challenge_area{
-  background-color: #000;
+  background: rgb(3, 0, 27);
+
   color: #fff;
 }
 .hashtag-photo svg{
@@ -3741,14 +3743,13 @@ color: #000;
 }
 .notyet{
   position: relative;
-  height: 250px;
+  height: 350px;
   color: white;
 }
 .noone {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 30%;
   left: 50%;
   transform: translate(-40%,-50%);
-  font-size: xxx-large;
-  font-weight: bolder;
+  font-size: 3em;
 }
