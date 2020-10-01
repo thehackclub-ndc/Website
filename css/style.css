@@ -442,6 +442,16 @@ h3 {
   font-weight: 600;
 }
 
+@media screen and (max-width:755.99px){
+  .evet_location{
+    text-align: center;
+  }
+  .section_title h2 {
+    line-height: 52px;
+    font-size: 34px;
+  }
+}
+
 .about_area img {
   max-width: 100%;
 }

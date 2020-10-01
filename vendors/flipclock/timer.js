@@ -56,7 +56,14 @@ timer.update = function() {
   timer.minutes.innerHTML = m
   timer.seconds.innerHTML = s
   
-  if(d==0 && h==0 && m==0 && s==0 ){
+  if(d==0 && h==0 && m==0 && s==0 || s<0 ){
+    if(s<0){
+      d=0;h=0;m=0;s=0;
+      timer.days.innerHTML = d
+      timer.hours.innerHTML = h
+      timer.minutes.innerHTML = m
+      timer.seconds.innerHTML = s
+    }
     clearInterval(timer.endOftime);
   }
 }
