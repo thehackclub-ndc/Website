@@ -42,7 +42,7 @@ a:hover, a:focus {
 body {
   line-height: 24px;
   font-size: 14px;
-  font-family: 'Zilla Slab', serif;
+  font-family: sans-serif;
   font-weight: 300;
   color: #777777;
 }
@@ -52,7 +52,7 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Zilla Slab', serif;
+  font-family: sans-serif;
   font-weight: 600;
 }
 
@@ -75,10 +75,11 @@ button:focus {
 }
 
 .section_title h2 {
-  font-size: 36px;
+  font-size: 50px;
   line-height: 40px;
   color: #00c8e6;
   font-weight: 600;
+  padding: 20px;
 }
 .about_area .section_title h2 {
   color: #00c8e6;
@@ -394,6 +395,10 @@ background-image: linear-gradient(to right, rgb(228, 115, 45), rgb(206, 41, 143)
 
 .evet_location p span {
   padding-right: 12px;
+}
+
+.evet_location .btn {
+  margin-top: 15px;
 }
 
 .event_time {
@@ -787,7 +792,7 @@ h3 {
 
 .breadcrumb li + li:before {
   content: "\e87a";
-  font-family: 'Zilla Slab', serif;
+  font-family: sans-serif;
   font-size: 14px;
   font-weight: 600;
   vertical-align: middle;
@@ -1852,7 +1857,7 @@ h3 {
   line-height: 26px;
   color: #999;
   border: 1px solid #eeeeee;
-  font-family: 'Zilla Slab', serif;
+  font-family: sans-serif;
   border-radius: 0px;
   padding-left: 20px;
 }
@@ -1925,7 +1930,7 @@ h3 {
   text-align: center;
   color: #00c8e6;
   padding-bottom: 10px;
-  font-family: 'Zilla Slab', serif;
+  font-family: sans-serif;
 }
 
 .modal-message .modal-dialog .modal-content .modal-header p {
@@ -3624,6 +3629,14 @@ top: -10px;
 .event_blog_area .after {
   border-left: 1px solid 
   #fff;
+}
+
+@media screen and (max-width:767.99px){
+  .event_blog_area .after{
+    border: none;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
 }
 
 .footer-area .club_name{
