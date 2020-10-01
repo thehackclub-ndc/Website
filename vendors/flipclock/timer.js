@@ -1,12 +1,6 @@
-var today = new Date();
-var event_date =  new Date(2020, 03, 10, 10, 00);
-var date_now = new Date;
-var days_left = (event_date - date_now)/(1000*60*60*24);
-var timer = function() {};
-timer.countdownDate = new Date();
 
-// set date to 10 days in the future for testing purposes
-timer.countdownDate.setDate( timer.countdownDate.getDate() + days_left );
+var timer = function() {};
+timer.countdownDate = new Date("Oct 1, 2020 16:49:20").getTime();
 
 /*
 * Get thing started
@@ -16,7 +10,7 @@ timer.init = function() {
   
   
   timer.getTimes();
-  setInterval(function() { timer.update() }, 1000);
+  timer.endOftime = setInterval(function() { timer.update() }, 1000);
 }
 
 /*
@@ -49,13 +43,29 @@ timer.update = function() {
     timer.timer.style.opacity = 1;
   }
   
-  timer.currentDate = new Date();
+  timer.currentDate = new Date().getTime();;
   timer.difference = timer.countdownDate - timer.currentDate;
   
-  timer.days.innerHTML = timer.getTimeRemaining(timer.times.day, 1);
-  timer.hours.innerHTML = timer.getTimeRemaining(timer.times.hour, 24);
-  timer.minutes.innerHTML = timer.getTimeRemaining(timer.times.minute, 60);
-  timer.seconds.innerHTML = timer.getTimeRemaining(timer.times.second, 60);
+  let d = timer.getTimeRemaining(timer.times.day, 1);
+  let h = timer.getTimeRemaining(timer.times.hour, 24);
+  let m = timer.getTimeRemaining(timer.times.minute, 60);
+  let s = timer.getTimeRemaining(timer.times.second, 60);
+
+  timer.days.innerHTML = d
+  timer.hours.innerHTML = h
+  timer.minutes.innerHTML = m
+  timer.seconds.innerHTML = s
+  
+  if(d==0 && h==0 && m==0 && s==0 || s<0 ){
+    if(s<0){
+      d=0;h=0;m=0;s=0;
+      timer.days.innerHTML = d
+      timer.hours.innerHTML = h
+      timer.minutes.innerHTML = m
+      timer.seconds.innerHTML = s
+    }
+    clearInterval(timer.endOftime);
+  }
 }
 
 /*
